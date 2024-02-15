@@ -1,6 +1,9 @@
 package utils
 
-import "strings"
+import (
+	"fmt"
+	"strings"
+)
 
 func Sun(n1 int, n2 int) int {
 	return n1 + n2
@@ -19,4 +22,31 @@ func Contains(value string, value2 string) bool {
 
 func ToUpperCase(value string) string {
 	return strings.ToUpper(value)
+}
+
+func For(lista []string) {
+
+	for _, item := range lista {
+		fmt.Println(item)
+	}
+}
+
+type Person struct {
+	name string
+}
+
+func SortList(sort []int) []int {
+	size := len(sort)
+	for i := 0; i < size; i++ {
+
+		for j := i + 1; j < size; j++ {
+
+			if sort[j] < sort[i] {
+				temp := sort[j]
+				sort[j] = sort[i]
+				sort[i] = temp
+			}
+		}
+	}
+	return sort
 }
