@@ -15,7 +15,7 @@ func main() {
 
 	lista := []int{0, 1, 2, 1, 5, 9}
 
-	fmt.Printf("lista[0]: %v\n", lista[3])
+	fmt.Printf("lista[0]: %v\n", lista[4])
 
 	listaDeString := []string{"K"}
 
@@ -47,5 +47,23 @@ func main() {
 	meuNomeMaiusculo := utils.ToUpperCase(meuNomeMinusculo)
 
 	fmt.Println(meuNomeMaiusculo)
+
+	sort := []int{1, 3, 2, 9}
+	size := 0
+	size = len(sort)
+
+	for i := 0; i < size-1; i++ {
+
+		for j := i + 1; j < size; j++ {
+
+			if sort[j] < sort[i] {
+				temp := sort[j]
+				sort[j] = sort[i]
+				sort[i] = temp
+			}
+		}
+	}
+
+	fmt.Println(sort)
 
 }
