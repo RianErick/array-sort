@@ -2,9 +2,21 @@ package main
 
 import (
 	"fmt"
+	"math/rand"
+	"time"
+
+	"os"
+	"os/exec"
 
 	"github.com/RianErick/go-learning/player"
+	"github.com/RianErick/go-learning/utils"
 )
+
+func clearConsole() {
+	cmd := exec.Command("clear")
+	cmd.Stdout = os.Stdout
+	cmd.Run()
+}
 
 func main() {
 	fmt.Println(player.Title())
@@ -14,14 +26,25 @@ func main() {
 		check  bool
 	}
 
-	var oneArray ArraySort
-	var twoArray ArraySort
+	var arrayUser = make([]int, 10)
 
-	oneArray.stream = []int{1, 4, 9, 7, 3, 2, 0}
-	oneArray.check = false
+	rand.Seed(int64(time.Now().Nanosecond()))
 
-	twoArray.stream = []int{1, 2, 4, 52, 2, 3, 0}
-	twoArray.check = true
+	for i := 0; i < len(arrayUser); i++ {
+		arrayUser[i] = rand.Intn(100)
+	}
 
-	//Logica para fazer o usuario escolher qual do array seria a escolha correta
+	fmt.Printf("You have 10 seconds to memorize it, run: %v\n", arrayUser)
+
+	for i := 0; i < 10; i++ {
+		time.Sleep(time.Second)
+		fmt.Printf("===")
+	}
+	clearConsole()
+	fmt.Println(player.Title())
+
+	arrayTrue := utils.SortList(arrayUser)
+
+	fmt.Println(arrayTrue)
+
 }
