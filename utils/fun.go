@@ -56,19 +56,6 @@ func SortList(sort []int) []int {
 	return sort
 }
 
-func FilterIsReal(matrixOfArray []Matrix, option bool) []Matrix {
-
-	var filtro []Matrix
-
-	for _, p := range matrixOfArray {
-		if p.Real == option {
-			filtro = append(filtro, p)
-		}
-
-	}
-	return filtro
-}
-
 // func Shuffle(slice []Matrix) {
 // 	rand.Shuffle(len(slice), func(i, j int) {
 // 		slice[i], slice[j] = slice[j], slice[i]

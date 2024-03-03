@@ -34,29 +34,31 @@ func main() {
 	fmt.Printf("You have 10 seconds to memorize it, run: %v\n", arrayUser)
 
 	for i := 0; i < 10; i++ {
-		time.Sleep(time.Second) // Tempo para o jogado memorizar
+		time.Sleep(time.Second)
 		fmt.Printf("===")
 	}
 	clearConsole()
 	fmt.Println(player.Title())
 
 	for i := 0; i < 10; i++ {
-		arrayMemory0[i] = rand.Intn(100) //Cria as outras opcoes de escolha
+		arrayMemory0[i] = rand.Intn(100)
 		for j := 0; j < 10; j++ {
 			arrayMemory1[i] = rand.Intn(100)
 		}
 	}
 
-	arrayTrue := utils.SortList(arrayUser) // Ordena o array
+	arrayTrue := utils.SortList(arrayUser)
 	i0 := utils.SortList(arrayMemory0)
 	i1 := utils.SortList(arrayMemory1)
 
 	matrixOfArray := []utils.Matrix{
 		{Array: arrayTrue, Real: true},
-		{Array: i0, Real: false}, //Matrix de arrays
+		{Array: i0, Real: false},
 		{Array: i1, Real: false},
 	}
 	var selectOption int
+
+	fmt.Println(matrixOfArray[2])
 
 	fmt.Println("Select option true:")
 	for i := 0; i < len(matrixOfArray); i++ {
@@ -64,13 +66,10 @@ func main() {
 	}
 	fmt.Scanf("%d", &selectOption)
 
-	fmt.Println(selectOption)
-
-	selectIndex := utils.FilterIsReal(matrixOfArray, matrixOfArray[selectOption].Real)
-
-	if selectIndex[selectOption].Real {
+	if matrixOfArray[selectOption].Real {
 		fmt.Println("Ganhou")
 	} else {
 		fmt.Println("Perdeu")
 	}
+
 }
