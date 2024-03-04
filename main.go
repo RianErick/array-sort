@@ -58,8 +58,6 @@ func main() {
 	}
 	var selectOption int
 
-	fmt.Println(matrixOfArray[2])
-
 	fmt.Println("Select option true:")
 	for i := 0; i < len(matrixOfArray); i++ {
 		fmt.Printf("%v : %v\n", i, matrixOfArray[i].Array)
