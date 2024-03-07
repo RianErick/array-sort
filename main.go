@@ -8,7 +8,7 @@ import (
 	"os"
 	"os/exec"
 
-	"github.com/RianErick/go-learning/player"
+	"github.com/RianErick/go-learning/game"
 	"github.com/RianErick/go-learning/utils"
 )
 
@@ -19,7 +19,7 @@ func clearConsole() {
 }
 
 func main() {
-	fmt.Println(player.Title())
+	fmt.Println(game.Title())
 
 	var arrayUser = make([]int, 10)
 	var arrayMemory0 = make([]int, 10)
@@ -27,7 +27,7 @@ func main() {
 
 	rand.Seed(int64(time.Now().Nanosecond()))
 
-	for i := 0; i < len(arrayUser); i++ { // Cria um array de 10 posicoes randomico
+	for i := 0; i < len(arrayUser); i++ {
 		arrayUser[i] = rand.Intn(100)
 	}
 
@@ -38,7 +38,7 @@ func main() {
 		fmt.Printf("===")
 	}
 	clearConsole()
-	fmt.Println(player.Title())
+	fmt.Println(game.Title())
 
 	for i := 0; i < 10; i++ {
 		arrayMemory0[i] = rand.Intn(100)
@@ -65,9 +65,9 @@ func main() {
 	fmt.Scanf("%d", &selectOption)
 
 	if matrixOfArray[selectOption].Real {
-		fmt.Println("Ganhou")
+		fmt.Println("Inner :)")
 	} else {
-		fmt.Println("Perdeu")
+		fmt.Println("F :0")
 	}
 
 }
