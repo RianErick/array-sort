@@ -6,7 +6,6 @@ Este é um simples jogo da memória desenvolvido em Go. O objetivo do jogo é en
 
 - [Golang](https://golang.org/doc/install) 1.16 ou superior
 
-- 
 ## Bubble-sort utilizado :
 ![gameingo(2)](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
