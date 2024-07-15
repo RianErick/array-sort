@@ -9,6 +9,10 @@ Este é um simples jogo da memória desenvolvido em Go. O objetivo do jogo é en
 ## Como Rodar
 ![gameingo(2)](https://github.com/RianErick/array-sort/assets/96176662/214e47a2-031e-42d7-9009-025aa87cc670)
 
+## Bubble-sort utilizado :
+![gameingo(2)](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
+
+
 
 1. Clone este repositório:
     ```sh
