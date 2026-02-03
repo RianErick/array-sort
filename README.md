@@ -14,7 +14,7 @@ Este é um simples jogo da memória desenvolvido em Go. O objetivo do jogo é en
 
 1. Clone este repositório:
     ```sh
-    git clone https://github.com/seu-usuario/array-sort.git
+    git clone https://github.com/RianErick/array-sort.git
     ```
 
 2. Navegue até o diretório do projeto:
